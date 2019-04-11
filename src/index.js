@@ -1,12 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import "./index.scss";
+import * as ROUTES from "./common/routes";
+import {Route, Router, Switch} from "react-router-dom";
+import HomePage from "./component/view/homePage/Home";
+import {Provider} from "react-redux";
+import React from "react";
+import customHistory from "./common/history";
+import {hot} from "react-hot-loader";
+import {render} from "react-dom";
+import store from "./common/store";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = () => {
+    return (
+        <Provider store={store}>
+            <Router history={customHistory}>
+                <div className="app-container">
+                    <Switch>
+                        <Route
+                            exact
+                            path={ROUTES.HOME}
+                            component={HomePage}
+                        />
+                    </Switch>
+                </div>
+            </Router>
+        </Provider>
+    );
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+export default hot(module)(App);
+const rootEl = document.getElementById("app");
+render(<App/>, rootEl);

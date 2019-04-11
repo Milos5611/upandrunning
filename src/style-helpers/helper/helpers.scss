@@ -1,0 +1,82 @@
+//  =================================================================================================
+//
+//  Helper Classes
+//
+//  =================================================================================================
+
+//  ==========================================================================
+//  Object Fit Fallback
+//  ==========================================================================
+.object-fit-fallback {
+  position: absolute;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 200%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//  ==========================================================================
+//  Visibility Controllers
+//  ==========================================================================
+.is-visually-hidden {
+  border: 0 !important;
+  clip: rect(1px 1px 1px 1px) !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  left: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 1px !important;
+}
+
+.is-hidden { display: none; }
+
+.is-hidden-lg {
+  @include breakpoint(lg) { display: none !important; }
+}
+
+.is-hidden-md {
+  @include breakpoint(md) { display: none !important; }
+}
+
+.is-hidden-sm {
+  @include breakpoint(sm) { display: none !important; }
+}
+
+.is-visible-xl {
+  display: none !important;
+  @include breakpoint(xl) { display: block !important; }
+}
+
+
+.is-visible-lg {
+  display: none !important;
+  @include breakpoint(lg) { display: block !important; }
+}
+
+.is-visible-md {
+  display: none !important;
+  @include breakpoint(md) { display: block !important; }
+}
+
+.is-visible-sm {
+  display: none !important;
+  @include breakpoint(sm) { display: block !important; }
+}
+
+//  ==========================================================================
+//  Animation Helpers
+//  ==========================================================================
+.is-ready-to-fade-in {
+  opacity: 0;
+  transition: opacity 0.75s;
+
+  &.has-faded-in { opacity: 1; }
+}

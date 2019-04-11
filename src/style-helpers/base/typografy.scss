@@ -1,0 +1,60 @@
+html * {
+    outline: 0 !important;
+}
+
+html {
+    background: transparent;
+    box-sizing: border-box;
+    font-size: $font-size-root;
+    min-height: 100vh;
+    position: relative;
+    text-size-adjust: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+// Fix autocomplete color
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+    background-color: #EDEDED !important;
+    color: #555 !important;
+    -webkit-box-shadow: 0 0 0 1000px #EDEDED inset !important;
+    -webkit-text-fill-color: #555555 !important;
+}
+
+//links
+a {
+    @extend .link;
+    font-weight: bold;
+    line-height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #232323;
+    font-family: $primaryFont;
+    text-align: center;
+    transition: color 0.3s;
+
+    &:hover {
+        text-decoration: none;
+        color: rgb(225, 34, 39);
+    }
+}
+
+// Paragraph
+p {
+    font-size: 16px;
+    line-height: 1.33;
+}
+
+.headline--red__fix {
+    color: #E12227;
+}

@@ -1,0 +1,195 @@
+.user--profile--wrapper {
+    background-color: #033D82;
+    min-height: 100%;
+    min-width: 100%;
+    padding: 100px 0;
+
+    .user--profile {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        border-radius: 30px;
+        background-color: #FFFFFF;
+        padding: 66px;
+
+        @include breakpoint-max(xs) {
+            padding: 66px 30px;
+        }
+
+        .user--profile_disclamer {
+            color: #033D82;
+            font-family: $font-proxima-nova;
+        }
+
+        .user--profile--update {
+            font-size: 16px;
+        }
+
+        .user--profile__headline {
+            color: #000000;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 34px;
+            font-family: $font-proxima-nova;
+        }
+
+        .edit-mode {
+            display: flex;
+            justify-content: space-between;
+
+            .edit--text {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .edit__paragraph {
+                    @extend .text;
+                    padding-left: 10px;
+                    color: #006EEE;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .label {
+            width: 110px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 25px;
+            color: #4A4A4A;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 27px;
+            font-family: $font-proxima-nova;
+            @include breakpoint-max(xs) {
+                width: auto;
+            }
+        }
+
+        article {
+            justify-content: space-between;
+
+            .user--profile__field {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                position: relative;
+                @include breakpoint(xl) {
+                    align-items: baseline;
+                    flex-direction: row;
+                }
+
+                @include breakpoint-max(lg) {
+                    .Dropdown-disabled {
+                        padding-left: 0;
+                    }
+                }
+
+                .input[disabled],
+                .is-selected {
+                    @extend .text;
+                    color: #000000;
+                    font-family: $font-proxima-nova;
+                    font-size: 16px;
+                    line-height: 20px;
+                    @include breakpoint-max(lg) {
+                        padding-left: 0;
+                    }
+                }
+
+                &.user--profile--birth-date {
+                    .user--profile--birth-date--disclaimer {
+                        width: 372px;
+                        border-radius: 5px;
+                        background-color: #DAE8F8;
+                        box-shadow: 0 2px 4px 0 rgba(178, 168, 168, 0.5);
+                        position: absolute;
+                        bottom: -75px;
+                        z-index: 1;
+                        padding: 10px;
+
+                        .disclaimer {
+                            color: #4A4A4A;
+                            font-size: 12px;
+                            letter-spacing: 0.56px;
+                            line-height: 17px;
+                        }
+
+                        @include breakpoint-max(sm) {
+                            width: auto;
+                        }
+                    }
+                }
+
+                &.user--profile--address {
+                    .label {
+                        width: 110px;
+                        @include breakpoint-max(xs) {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+
+            @include breakpoint(lg) {
+                display: flex;
+            }
+        }
+
+        .billing-data {
+
+        }
+
+        .account-information {
+            .user-credential {
+                display: flex;
+                flex-direction: column;
+
+                .user {
+                    flex-wrap: wrap;
+
+                    .error__text {
+                        width: 100%;
+                    }
+
+                    .label {
+                        width: 110px;
+                        @include breakpoint-max(xs) {
+                            width: auto;
+                        }
+                    }
+
+                    @include breakpoint(sm) {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+        .user--profile-sign-up {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+
+            .user--profile__button {
+                &:not([disabled]) {
+                    background: #006EEE;
+
+                    &.save {
+                        margin-right: 15px;
+                        @include breakpoint-max(xs) {
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    &.cancel {
+                        background-color: #5EA6EF;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

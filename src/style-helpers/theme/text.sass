@@ -1,0 +1,52 @@
+.headline
+  +headlineSize22
+  color: black
+  font-weight: 300
+
+.medium-headline
+  @extend .headline
+  +headlineSize18
+
+.big-headline
+  @extend .headline
+  +headlineSize32
+
+.small-headline
+  @extend .headline
+  +headlineSize16
+
+.headline-centered
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+
+.headline-bordered-top
+  @extend .headline
+  padding-top: 24px
+  border-top: 1px solid black
+
+.text
+  +textSize16
+  font-weight: 400
+
+.small-text
+  @extend .text
+  +textSize14
+
+.small-short-text
+  @extend .text
+  +textShortSize14
+
+.very-small-text
+  @extend .text
+  +textSize13
+
+.error__text
+    @extend .very-small-text
+    color: darkred
+
+.link
+  @extend .text
+  cursor: pointer
+  font-weight: bold
+

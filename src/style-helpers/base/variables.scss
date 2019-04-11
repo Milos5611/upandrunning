@@ -1,0 +1,114 @@
+//  ======================================================================================================
+//
+//  Variables
+//
+//  ======================================================================================================
+
+//  Responsive Breakpoints
+//  --------------------------------------------------
+$break-xxs: 360px !default;
+$break-xs: 375px !default;
+$break-sm: 580px !default;
+$break-md: 768px !default;
+$break-lg: 1024px !default;
+$break-xl: 1280px !default;
+$break-xxl: 1440px !default;
+
+//  Color
+//  --------------------------------------------------
+// Neutrals
+$white: rgba(255, 255, 255, 1) !default; // #FFFFFF
+$black: rgba(0, 0, 0, 1) !default; // #000000
+$transparent: rgba(0, 0, 0, 0) !default;
+$ttransparent: rgba(255, 255, 255, 1) !default;
+
+$tungsten: #7c8180 !default;
+$miami-blue: #7ad7dd !default;
+$malibu-blue: #8ff8ff !default;
+$bg-grey-1: #f5f5f5 !default;
+$bg-grey-2: #eaebec !default;
+$aluminum: #dfe1e2 !default;
+$iron: #ccd0d3 !default;
+$titanium: #b9bebd !default;
+$slate: #a3a7a6 !default;
+$lead: #4A4A4A !default;
+$buttonPrimary: #E12227;
+$footer-background-color: #001A39;
+$footerText: #CBD4DF;
+
+//  Default Color Settings
+//  --------------------------------------------------
+$body-bg: $bg-grey-1 !default;
+$default-txt-color: $tungsten !default;
+$placeholder-txt-color: $tungsten !default;
+
+$hr-color: $black !default;
+$highlight: $tungsten !default;
+$highlight-text: $white !default;
+
+//  Font Families
+//  --------------------------------------------------
+$font-proxima-nova: 'proxima-nova', serif !default;
+$font-helvetica: "Helvetica Neue", sans-serif;;
+$primaryFont: $font-proxima-nova;
+$secondaryFont: $font-helvetica;
+
+
+//  Font Stacks
+//  --------------------------------------------------
+$font-regular: $primaryFont !default;
+$font-italic: $primaryFont !default;
+$font-family-default: $font-regular !default;
+
+//  Type Sizes (use rem mixin to apply)
+//  --------------------------------------------------
+$font-size-root: 14px !default;
+$font-size-base: 1rem !default;
+
+//  Defaults
+//  --------------------------------------------------
+$font-weight-default: normal !default;
+$line-height-base: 1.5 !default;
+
+//  Headings
+//  --------------------------------------------------
+$headings-font-weight: normal !default;
+$headings-line-height: $line-height-base !default;
+$headings-font-color: $default-txt-color !default;
+
+//  Blockquotes
+//  --------------------------------------------------
+$blockquote-font-family: $font-family-default !default;
+$blockquote-txt-size: $font-size-base !default;
+$blockquote-txt-color: $default-txt-color !default;
+
+//  Links
+//  --------------------------------------------------
+$link-color: $tungsten !default;
+$link-hover-color: $miami-blue !default;
+
+//  Forms
+//  --------------------------------------------------
+$font-family-form: $font-family-default !default;
+$font-family-label: $font-family-default !default;
+
+//  Animation
+//  --------------------------------------------------
+$default-animation: all 0.3s !default;
+$default-animation-duration: 0.3s !default;
+
+//  Layout
+//  --------------------------------------------------
+$max-width: 1204px !default;
+
+$nav-height-sm: 70px !default;
+$nav-height-md: 80px !default;
+$nav-height-lg: 75px !default;
+
+$default-horizontal-padding: 25px;
+
+$bg-color: $transparent;
+$dot-color: $black;
+$dot-space: 6px;
+$dot-size: 1px;
+$dot-percent: 8%;

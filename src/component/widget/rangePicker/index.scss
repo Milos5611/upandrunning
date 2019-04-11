@@ -1,0 +1,50 @@
+.date-range__nav {
+    display: flex;
+    align-items: center;
+
+    .period {
+        color: #000000;
+        font-family: $font-proxima-nova;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 22px;
+        padding-right: 10px;
+    }
+
+    .InputFromTo {
+        .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+            background-color: #f0f8ff !important;
+            color: #4a90e2;
+        }
+
+        .DayPicker-Day {
+            border-radius: 0 !important;
+
+            .DayPicker-Day--start {
+                border-top-left-radius: 50% !important;
+                border-bottom-left-radius: 50% !important;
+            }
+
+            .DayPicker-Day--end {
+                border-top-right-radius: 50% !important;
+                border-bottom-right-radius: 50% !important;
+            }
+        }
+
+        .DayPickerInput-Overlay {
+            width: 455px !important;
+        }
+
+        .InputFromTo-to .DayPickerInput-Overlay {
+            margin-left: -235px !important;
+        }
+
+        input {
+            font-size: 16px;
+            padding: 10px;
+            display: block;
+            border: 1px solid #4A4A4A;
+            border-radius: 19px;
+        }
+    }
+}

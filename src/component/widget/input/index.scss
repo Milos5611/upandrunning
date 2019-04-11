@@ -1,0 +1,26 @@
+.input {
+    height: 40px;
+    width: 241px;
+    border-radius: 19px;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+
+    &[disabled] {
+        border: none;
+        background-color: white;
+        &::-webkit-input-placeholder {
+            color:transparent;
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+            color:transparent;
+        }
+
+        &:-ms-input-placeholder {
+            color:transparent;
+        }
+
+    }
+}
