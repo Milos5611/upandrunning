@@ -1,7 +1,7 @@
 import "./index.scss";
 import * as ROUTES from "./common/routes";
 import {Route, Router, Switch} from "react-router-dom";
-import HomePage from "./component/view/homePage/Home";
+import HomePage from "./component/view/home/Home";
 import {Provider} from "react-redux";
 import React from "react";
 import customHistory from "./common/history";

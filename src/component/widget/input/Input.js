@@ -2,12 +2,7 @@ import React, {Fragment} from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Input = ({placeholder = "", type = "text", value, onChange, name, error, pattern, disabled, className}) => {
-    const errorMessage = {
-        "email": "Email is not in good format",
-        "confirmPassword": "Password don't match",
-        "password": "Please check your password and try again"
-    };
+const Input = ({placeholder = "", type = "text", value, onChange, name, disabled, className}) => {
     return (
         <Fragment>
             <input
@@ -17,10 +12,8 @@ const Input = ({placeholder = "", type = "text", value, onChange, name, error, p
                 placeholder={placeholder}
                 value={value || ""}
                 onChange={onChange}
-                pattern={pattern}
                 disabled={disabled}
             />
-            {error && <p className="error__text">{errorMessage[name]}</p>}
         </Fragment>
     );
 };
@@ -34,9 +27,7 @@ Input.propTypes = {
         PropTypes.number
     ]),
     onChange: PropTypes.func,
-    error: PropTypes.bool,
     disabled: PropTypes.bool,
-    pattern: PropTypes.string,
     className: PropTypes.string
 };
 

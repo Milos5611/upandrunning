@@ -12,7 +12,7 @@ import {
     PHONE,
     STATE,
     ZIP_CODE,
-} from "../service/reducer/userProfile";
+} from "../service/reducer/home";
 import {
     getUserProfileData,
     updateUserData,
@@ -27,8 +27,8 @@ import {
     updateUserProfilePhone,
     updateUserProfileState,
     updateUserProfileZip
-} from "../service/actionCreator/userProfileActionCreator";
-import UserProfile from "../component/view/userProfile/UserProfile";
+} from "../service/actionCreator/home";
+import UserProfile from "../component/view/home/UserProfile";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 

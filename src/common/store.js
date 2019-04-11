@@ -1,6 +1,6 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import thunk from "redux-thunk";
-import userProfile from "../service/reducer/userProfile";
+import userProfile from "../service/reducer/home";
 
 const reducers = {
     userProfile
