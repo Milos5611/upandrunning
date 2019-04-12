@@ -128,7 +128,7 @@ module.exports = {
         new webpack.DefinePlugin({
             "window.com.upandrunning": {
                 BASE_URL: JSON.stringify("/"),
-                API_URL: JSON.stringify("http://tim.uardev.com/trial-project/api/")
+                API_URL: JSON.stringify("http://tim.uardev.com/trial-project/api")
             }
         })
     ],

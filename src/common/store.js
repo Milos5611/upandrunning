@@ -1,9 +1,9 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
+import tagList from "../service/reducer";
 import thunk from "redux-thunk";
-import userProfile from "../service/reducer/home";
 
 const reducers = {
-    userProfile
+    tagList
 };
 
 const logger = store => next => action => {

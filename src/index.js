@@ -1,9 +1,9 @@
 import "./index.scss";
 import * as ROUTES from "./common/routes";
 import {Route, Router, Switch} from "react-router-dom";
-import HomePage from "./component/view/home/Home";
 import {Provider} from "react-redux";
 import React from "react";
+import TagList from "./container/tagList";
 import customHistory from "./common/history";
 import {hot} from "react-hot-loader";
 import {render} from "react-dom";
@@ -18,7 +18,7 @@ const App = () => {
                         <Route
                             exact
                             path={ROUTES.HOME}
-                            component={HomePage}
+                            component={TagList}
                         />
                     </Switch>
                 </div>
