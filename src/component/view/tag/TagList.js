@@ -1,5 +1,6 @@
-import React, {Fragment} from "react";
+import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
+import React from "react";
 import uuid from "uuid";
 
 export default class TagList extends React.Component {
@@ -25,10 +26,14 @@ export default class TagList extends React.Component {
         loadListOfFiles(page, event.target.id);
     };
 
+    handleChangeFileName = () => {
+
+    };
+
     render() {
         const {tagList, fileList} = this.props;
         return (
-            <Fragment>
+            <section className="tag-wrapper">
                 <aside>
                     <ul>
                         <h2>{"Tags"}</h2>
@@ -44,15 +49,18 @@ export default class TagList extends React.Component {
                         }
                     </ul>
                 </aside>
-                <section>
+                <div>
                     <h3>{"Search Result"}</h3>
                     {
                         fileList && fileList.files.map(file => (
-                            <span key={uuid.v4()}>{file.name}</span>
+                            <Link
+                                key={uuid.v4()}
+                                to="/editTag"
+                                onClick={this.handleChangeFileName}>{file.name}</Link>
                         ))
                     }
-                </section>
-            </Fragment>
+                </div>
+            </section>
         );
     }
 }
